@@ -47,8 +47,6 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-
-
 \documentclass[journal]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
@@ -63,6 +61,7 @@
 % (uncomment the ones you want to load)
 
 
+\usepackage{graphicx}
 % *** MISC UTILITY PACKAGES ***
 %
 %\usepackage{ifpdf}
@@ -588,6 +587,29 @@ Subsubsection text here.
 % footnotes above bottom floats. This can be corrected via the
 % \fnbelowfloat command of the stfloats package.
 
+\section{Background}
+With the advent of \textbf{\textit{cloud computing}} and as per the need of modern distributed applications many orchestration platforms have emerged with the need for effective utilization hardware resources while keeping up with the application performance SLAs. The core responsibilties of an orchestration platform include resource provisioning,  application deployment, data security and load balancing etc. These platforms are mainly classified into \textbf{\textit{virtualization}} based platforms and \textit{\textbf{container}} based platforms.
+
+\begin{figure}
+  \includegraphics[width=1.0\linewidth]{vm_vs_containers.png}
+  \caption{Figure 1. Comparison of (a) hypervisor and (b) container-based orchestration platforms}
+  \label{fig:vm_vs_containers}
+\end{figure}
+
+\subsection{Virtualization based orchestration platforms}
+In these platforms the Hypervisor / Virtual Machine Monitor software is responsible of orchestration related activities e.g. Virtual Box, Xen/KVM/Esxi based virtualzation platforms etc.
+
+\subsection{Containerization based orchestration platforms}
+In these platforms the Container Engine is responsible for orchestration related activities.
+The most platoforms of this type are Docker Swarm and Kubernetes. 
+
+
+
+
+
+
+
+
 
 
 
@@ -712,4 +734,5 @@ Biography text here.
 
 % that's all folks
 \end{document}
+
 
